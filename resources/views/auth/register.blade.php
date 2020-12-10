@@ -61,6 +61,56 @@
                             </div>
                         </div>
 
+                        <div class="form-group row">
+                            <label for="no_hp" class="col-md-4 col-form-label text-md-right">{{ __('Nomor Handphone') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="no_hp" type="text" class="form-control" name="no_hp" required autocomplete="no_hp">
+                            </div>
+                            @error('no_hp')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="provinsi" class="col-md-4 col-form-label text-md-right">{{ __('Provinsi') }}</label>
+                            <div class="col-md-6">
+                                <select required class="form-control provinsi" name="provinsi"></select>
+                            </div>
+                            @error('provinsi')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="kota" class="col-md-4 col-form-label text-md-right">{{ __('Kota') }}</label>
+                            <div class="col-md-6">
+                                <select required class="form-control kota" name="kota"></select>
+                            </div>
+                            @error('kota')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="kecamatan" class="col-md-4 col-form-label text-md-right">{{ __('Kecamatan') }}</label>
+
+                            <div class="col-md-6">
+                                <select required class="form-control kecamatan" name="kecamatan"></select>
+                            </div>
+                            @error('kecamatan')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
@@ -75,3 +125,7 @@
     </div>
 </div>
 @endsection
+
+@push('js')
+    <script type="module" src="{{asset('js/api/select-daerah.js')}}"></script>
+@endpush
