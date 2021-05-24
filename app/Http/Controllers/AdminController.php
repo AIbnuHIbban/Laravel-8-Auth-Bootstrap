@@ -16,24 +16,6 @@ class AdminController extends Controller
             'dashboard' => [
                 'title' => 'Dashboard'
             ],
-            'kelola-audio' => [
-                'title' => 'Kelola Audio'
-            ],
-            'kelola-video' => [
-                'title' => 'Kelola Video'
-            ],
-            'kelola-karya' => [
-                'title' => 'Kelola Karya'
-            ],
-            'sosial-media' => [
-                'title' => 'Sosial Media'
-            ],
-            'pengaturan' => [
-                'title' => 'Pengaturan'
-            ],
-            'pengaturan-akun' => [
-                'title' => 'Pengaturan Akun'
-            ]
         ];
 
         foreach ($params[$pages] as $key => $value) {

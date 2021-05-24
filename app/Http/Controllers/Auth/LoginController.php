@@ -27,10 +27,10 @@ class LoginController extends Controller
      * @var string
      */
     protected function authenticated(){
-        if (Auth::user()->level === "admin") {
-            return redirect('admin/dashboard');
+        if (Auth::user()->role === 0) {
+            return redirect('home');
         }else{
-            return RouteServiceProvider::HOME;            
+            return redirect('admin/dashboard');
         }
     }
 

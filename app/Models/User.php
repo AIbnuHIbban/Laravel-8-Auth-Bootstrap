@@ -11,7 +11,7 @@ class User extends Authenticatable implements MustVerifyEmail
     use Notifiable;
 
     protected $fillable = [
-        'name', 'email', 'password','no_hp','provinsi','kota','kecamatan','level'
+        'name', 'email', 'password'
     ];
 
     protected $hidden = [
